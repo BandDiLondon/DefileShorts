@@ -1,4 +1,20 @@
-# DefileShorts
+<p align="center">
+  <img src="icons/icon128.png" width="96" alt="DefileShorts">
+</p>
+
+<h1 align="center">DefileShorts</h1>
+
+<p align="center">
+  <b>Au Short suivant, automatiquement.</b> · <b>Next Short, automatically.</b><br>
+  Extension Chrome · Aucune donnée recueillie · No data collected
+</p>
+
+<p align="center">
+  <a href="https://github.com/BandDiLondon/DefileShorts/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/BandDiLondon/DefileShorts?label=release"></a>
+  <a href="LICENSE"><img alt="Licence GPL-3.0" src="https://img.shields.io/badge/licence-GPL--3.0-blue"></a>
+  <img alt="Manifest V3" src="https://img.shields.io/badge/Chrome-Manifest%20V3-7c3aed">
+  <img alt="Aucune requête réseau" src="https://img.shields.io/badge/r%C3%A9seau-aucun-ec4899">
+</p>
 
 > **Fait avec une IA, en toute transparence.** Le code a été écrit par Claude (Anthropic), sous la direction de
 > BandDiLondon, qui a défini le besoin, testé et validé chaque version.
@@ -11,6 +27,8 @@
 ## Français
 
 Extension Chrome qui passe automatiquement au Short YouTube suivant quand la vidéo en cours se termine.
+
+![DefileShorts : le menu de l'extension et un Short qui passe au suivant](store/capture-fr-1280x800.png)
 
 - Un interrupteur dans la barre d'outils pour activer ou couper le défilement.
 - Agit seulement sur les pages Shorts de `youtube.com`.
@@ -57,6 +75,8 @@ Console, filtre `DefileShorts`.
 ## English
 
 Chrome extension that automatically moves to the next YouTube Short when the current one ends.
+
+![DefileShorts: the extension menu and a Short moving on to the next one](store/capture-en-1280x800.png)
 
 - A toolbar switch to turn auto-scroll on or off.
 - Acts only on `youtube.com` Shorts pages.

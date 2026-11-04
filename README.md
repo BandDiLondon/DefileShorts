@@ -14,8 +14,9 @@ Extension Chrome qui passe automatiquement au Short YouTube suivant quand la vid
 
 - Un interrupteur dans la barre d'outils pour activer ou couper le défilement.
 - Agit seulement sur les pages Shorts de `youtube.com`.
-- **Aucune donnée recueillie, aucune requête réseau, aucun cookie lu.** Toute la logique tient dans
-  [defile.js](defile.js), moins de 80 lignes. Voir [PRIVACY.md](PRIVACY.md).
+- Continue même quand l'onglet est en arrière-plan.
+- **Aucune donnée recueillie, aucune requête réseau, aucun cookie lu.** Deux petits fichiers :
+  [defile.js](defile.js) et [arriere-plan.js](arriere-plan.js). Voir [PRIVACY.md](PRIVACY.md).
 
 Le projet est né d'une mauvaise surprise : une extension de défilement de Shorts populaire a reçu une mise à jour
 qui lisait l'activité du compte Google de ses utilisateurs et l'envoyait à des serveurs tiers. DefileShorts fait la
@@ -34,6 +35,14 @@ Les Shorts tournent en boucle, souvent sans événement `ended`. Le script écou
 le retour au début juste après la fin. Il clique alors sur le bouton « Vidéo suivante » de la page
 (`#navigation-button-down`). Si rien ne bouge, il simule la flèche bas, puis fait défiler `#shorts-inner-container`.
 
+Onglet en arrière-plan : Chrome suspend l'affichage, donc le défilement de la page ne marche plus.
+[arriere-plan.js](arriere-plan.js), exécuté dans le contexte de la page (`world: MAIN`) et seulement sur les pages
+Shorts quand l'interrupteur est activé :
+- fait croire à YouTube que l'onglet est visible (`document.hidden`, `visibilityState`), pour que la lecture continue ;
+- remplace `requestAnimationFrame`, suspendu par Chrome, par une minuterie ;
+- à la fin du Short, lit l'identifiant du Short suivant dans les données de la page et ouvre
+  `/shorts/<identifiant>`. La page se recharge, avec une courte pause entre les Shorts.
+
 Diagnostic : mettre `DIAGNOSTIC = true` en haut de `defile.js`, recharger l'extension et l'onglet, puis F12 →
 Console, filtre `DefileShorts`.
 
@@ -51,8 +60,9 @@ Chrome extension that automatically moves to the next YouTube Short when the cur
 
 - A toolbar switch to turn auto-scroll on or off.
 - Acts only on `youtube.com` Shorts pages.
-- **No data collected, no network requests, no cookies read.** All the logic fits in [defile.js](defile.js), under 80
-  lines. See [PRIVACY.md](PRIVACY.md).
+- Keeps going when the tab is in the background.
+- **No data collected, no network requests, no cookies read.** Two small files: [defile.js](defile.js) and
+  [arriere-plan.js](arriere-plan.js). See [PRIVACY.md](PRIVACY.md).
 
 This project started after a bad surprise: a popular Shorts auto-scroll extension shipped an update that read its
 users' Google account activity and sent it to third-party servers. DefileShorts does the same useful thing, and
@@ -69,6 +79,12 @@ nothing else.
 Shorts loop, often without an `ended` event. The script listens to `timeupdate` on the video and detects the jump
 back to the start right after the end. It then clicks the page's own "Next video" button
 (`#navigation-button-down`), falls back to a simulated Down arrow, then to scrolling `#shorts-inner-container`.
+
+Background tab: Chrome suspends rendering, so page scrolling stops working. [arriere-plan.js](arriere-plan.js) runs
+in the page context (`world: MAIN`), only on Shorts pages and only when the switch is on. It tells YouTube the tab
+is visible so playback continues, replaces the suspended `requestAnimationFrame` with a timer, and when a Short ends
+it reads the next Short's identifier from the page data and opens `/shorts/<id>` (the page reloads, with a short
+pause between Shorts).
 
 ## Licence / License
 

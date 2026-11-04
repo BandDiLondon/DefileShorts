@@ -2,6 +2,7 @@ DefileShorts passe automatiquement au Short YouTube suivant quand la vidéo en c
 
 • Un interrupteur dans la barre d'outils pour activer ou couper le défilement.
 • Fonctionne seulement sur les Shorts de youtube.com.
+• Continue même quand l'onglet est en arrière-plan.
 • Aucune donnée recueillie, aucune requête réseau, aucun cookie lu : tout se passe dans votre navigateur.
 • Code court et lisible.
 

@@ -9,7 +9,7 @@ New-Item -ItemType Directory -Force $dist | Out-Null
 $zip = Join-Path $dist "DefileShorts-$version.zip"
 if (Test-Path $zip) { Remove-Item $zip }
 
-$fichiers = @('manifest.json', 'defile.js', 'popup.html', 'popup.js',
+$fichiers = @('manifest.json', 'defile.js', 'arriere-plan.js','popup.html', 'popup.js',
     'icons/icon16.png', 'icons/icon32.png', 'icons/icon48.png', 'icons/icon128.png',
     '_locales/fr/messages.json', '_locales/en/messages.json')
 

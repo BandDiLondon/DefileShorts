@@ -1,14 +1,18 @@
 // DefileShorts : passe au Short suivant quand la vidéo arrive au bout.
 // Les Shorts tournent en boucle (souvent sans événement « ended ») : on repère le retour au début
 // juste après la fin, puis on avance (bouton « Vidéo suivante », sinon flèche bas, sinon défilement).
-// Aucune requête réseau, aucune lecture de cookies ni de données de page.
+// Onglet caché : demande à arriere-plan.js d'ouvrir directement le Short suivant.
+// Aucune requête réseau, aucune lecture de cookies, rien n'est stocké ni envoyé.
 // Diagnostic : passer DIAGNOSTIC à true, puis console de la page (F12), préfixe [DefileShorts].
 (() => {
   const DIAGNOSTIC = false;
   const log = DIAGNOSTIC ? (...a) => console.log("[DefileShorts]", ...a) : () => {};
   let actif = true;
-  chrome.storage.local.get({ actif: true }, (v) => { actif = v.actif; });
-  chrome.storage.onChanged.addListener((ch) => { if (ch.actif) actif = ch.actif.newValue; });
+  // Signale l'état à arriere-plan.js (contexte de la page) par un attribut sur <html>.
+  const appliquer = (v) => { actif = v; document.documentElement.dataset.defileShorts = v ? "1" : "0"; };
+  chrome.storage.local.get({ actif: true }, (v) => appliquer(v.actif));
+  chrome.storage.onChanged.addListener((ch) => { if (ch.actif) appliquer(ch.actif.newValue); });
+  if (DIAGNOSTIC) document.documentElement.dataset.defileDiag = "1";
   log("chargé");
 
   const etat = new WeakMap(); // vidéo -> { src, t }
@@ -37,6 +41,13 @@
     const depart = location.href;
     log("fin détectée (" + raison + ")");
 
+    // Onglet caché : le défilement ne marche pas, arriere-plan.js ouvre directement le Short suivant.
+    if (document.hidden) {
+      log("onglet caché : demande à arriere-plan.js");
+      document.dispatchEvent(new CustomEvent("defileshorts-suivant"));
+      return;
+    }
+
     const b = trouverBouton();
     if (b) { log("clic sur le bouton suivant"); b.click(); }
 
@@ -52,7 +63,8 @@
         if (location.href !== depart) return;
         const c = document.querySelector("#shorts-inner-container");
         log(c ? "flèche bas sans effet : défilement du conteneur" : "aucun moyen trouvé pour avancer");
-        if (c) c.scrollBy({ top: c.clientHeight, behavior: "smooth" });
+        // Onglet caché : pas d'animation (elle ne progresserait pas).
+        if (c) c.scrollBy({ top: c.clientHeight, behavior: document.hidden ? "instant" : "smooth" });
       }, 800);
     }, 800);
   }

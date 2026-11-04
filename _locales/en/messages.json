@@ -1,0 +1,6 @@
+{
+  "nom": { "message": "DefileShorts" },
+  "description": { "message": "Automatically moves to the next YouTube Short when the current one ends. No data collection, no network access." },
+  "interrupteur": { "message": "Auto-scroll" },
+  "note": { "message": "YouTube Shorts only." }
+}

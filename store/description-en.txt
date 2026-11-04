@@ -1,0 +1,10 @@
+DefileShorts automatically moves to the next YouTube Short when the current one ends. No more manual scrolling.
+
+• A toolbar switch to turn auto-scroll on or off.
+• Works only on youtube.com Shorts.
+• No data collected, no network requests, no cookies read: everything stays in your browser.
+• Short, readable code.
+
+Transparency: this extension was coded with Claude (Anthropic), an AI, under the direction of BandDiLondon, who defined the need and tested and approved every version.
+
+DefileShorts is an independent project, not affiliated with YouTube or Google.

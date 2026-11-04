@@ -1,0 +1,10 @@
+DefileShorts passe automatiquement au Short YouTube suivant quand la vidéo en cours se termine. Plus besoin de faire défiler à la main.
+
+• Un interrupteur dans la barre d'outils pour activer ou couper le défilement.
+• Fonctionne seulement sur les Shorts de youtube.com.
+• Aucune donnée recueillie, aucune requête réseau, aucun cookie lu : tout se passe dans votre navigateur.
+• Code court et lisible.
+
+Transparence : cette extension a été codée avec Claude (Anthropic), une IA, sous la direction de BandDiLondon, qui a défini le besoin, testé et validé chaque version.
+
+DefileShorts est un projet indépendant, sans lien avec YouTube ni Google.

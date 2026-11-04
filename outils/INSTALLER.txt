@@ -1,0 +1,39 @@
+DefileShorts — installation avant la sortie sur le Chrome Web Store
+====================================================================
+
+FRANÇAIS
+
+1. Extraire ce zip (clic droit > Extraire tout). Placer le dossier « DefileShorts » à un endroit où il restera,
+   par exemple Documents. Chrome charge l'extension depuis ce dossier : ne pas le supprimer ni le déplacer ensuite.
+2. Dans Chrome, aller à l'adresse : chrome://extensions
+3. Activer « Mode développeur » (en haut à droite).
+4. Cliquer « Charger l'extension non empaquetée » et choisir le dossier « DefileShorts »
+   (celui qui contient manifest.json).
+5. Épingler l'icône (pièce de casse-tête dans la barre) pour avoir l'interrupteur.
+6. Recharger les onglets YouTube déjà ouverts (F5).
+
+Fonctionne aussi dans Edge (edge://extensions) et Brave (brave://extensions).
+Pas de mise à jour automatique dans ce mode : pour une nouvelle version, remplacer le contenu du dossier puis
+cliquer « Recharger » sur la carte de l'extension. Une fois sur le store, désinstaller cette version et prendre
+celle du store.
+
+Aucune donnée recueillie, aucune requête réseau. Code : https://github.com/BandDiLondon/DefileShorts
+Codé avec Claude (Anthropic), une IA, sous la direction de BandDiLondon.
+
+
+ENGLISH
+
+1. Extract this zip (right-click > Extract All). Put the "DefileShorts" folder somewhere it will stay, e.g.
+   Documents. Chrome loads the extension from that folder: do not delete or move it afterwards.
+2. In Chrome, go to: chrome://extensions
+3. Turn on "Developer mode" (top right).
+4. Click "Load unpacked" and pick the "DefileShorts" folder (the one containing manifest.json).
+5. Pin the icon (puzzle piece in the toolbar) to get the on/off switch.
+6. Reload any YouTube tabs already open (F5).
+
+Also works in Edge (edge://extensions) and Brave (brave://extensions).
+No automatic updates in this mode: for a new version, replace the folder contents and click "Reload" on the
+extension card. Once it is on the store, uninstall this copy and install the store version.
+
+No data collected, no network requests. Code: https://github.com/BandDiLondon/DefileShorts
+Coded with Claude (Anthropic), an AI, directed by BandDiLondon.

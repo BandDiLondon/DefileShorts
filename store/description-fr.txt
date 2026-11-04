@@ -6,6 +6,6 @@ DefileShorts passe automatiquement au Short YouTube suivant quand la vidéo en c
 • Aucune donnée recueillie, aucune requête réseau, aucun cookie lu : tout se passe dans votre navigateur.
 • Code court et lisible.
 
-Transparence : cette extension a été codée avec Claude (Anthropic), une IA, sous la direction de BandDiLondon, qui a défini le besoin, testé et validé chaque version.
+Transparence : code créé avec Claude (Anthropic), une IA, orchestré par BandDiLondon, qui a défini le besoin, testé et validé chaque version.
 
 DefileShorts est un projet indépendant, sans lien avec YouTube ni Google.

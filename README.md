@@ -16,10 +16,10 @@
   <img alt="Aucune requête réseau" src="https://img.shields.io/badge/r%C3%A9seau-aucun-ec4899">
 </p>
 
-> **Fait avec une IA, en toute transparence.** Le code a été écrit par Claude (Anthropic), sous la direction de
-> BandDiLondon, qui a défini le besoin, testé et validé chaque version.
+> **Fait avec une IA, en toute transparence.** **Code créé avec Claude (Anthropic), orchestré par BandDiLondon**, qui a défini le besoin,
+> testé et validé chaque version.
 >
-> **Built with AI, openly.** The code was written by Claude (Anthropic), directed by BandDiLondon, who defined the
+> **Built with AI, openly.** **Code created with Claude (Anthropic), orchestrated by BandDiLondon**, who defined the
 > need and tested and approved every version.
 
 [Français](#français) · [English](#english)

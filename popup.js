@@ -1,6 +1,7 @@
 document.documentElement.lang = chrome.i18n.getUILanguage();
 document.getElementById("texte").textContent = chrome.i18n.getMessage("interrupteur");
 document.getElementById("note").textContent = chrome.i18n.getMessage("note");
+document.getElementById("credit").textContent = chrome.i18n.getMessage("credit");
 
 const caseActif = document.getElementById("actif");
 chrome.storage.local.get({ actif: true }, (v) => { caseActif.checked = v.actif; });

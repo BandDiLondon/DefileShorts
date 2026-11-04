@@ -6,6 +6,6 @@ DefileShorts automatically moves to the next YouTube Short when the current one 
 • No data collected, no network requests, no cookies read: everything stays in your browser.
 • Short, readable code.
 
-Transparency: this extension was coded with Claude (Anthropic), an AI, under the direction of BandDiLondon, who defined the need and tested and approved every version.
+Transparency: code created with Claude (Anthropic), an AI, orchestrated by BandDiLondon, who defined the need and tested and approved every version.
 
 DefileShorts is an independent project, not affiliated with YouTube or Google.

@@ -18,7 +18,7 @@ cliquer « Recharger » sur la carte de l'extension. Une fois sur le store, dés
 celle du store.
 
 Aucune donnée recueillie, aucune requête réseau. Code : https://github.com/BandDiLondon/DefileShorts
-Codé avec Claude (Anthropic), une IA, sous la direction de BandDiLondon.
+Code créé avec Claude (Anthropic), orchestré par BandDiLondon.
 
 
 ENGLISH
@@ -36,4 +36,4 @@ No automatic updates in this mode: for a new version, replace the folder content
 extension card. Once it is on the store, uninstall this copy and install the store version.
 
 No data collected, no network requests. Code: https://github.com/BandDiLondon/DefileShorts
-Coded with Claude (Anthropic), an AI, directed by BandDiLondon.
+Code created with Claude (Anthropic), orchestrated by BandDiLondon.

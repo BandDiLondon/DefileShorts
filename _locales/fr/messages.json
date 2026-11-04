@@ -2,5 +2,6 @@
   "nom": { "message": "DefileShorts" },
   "description": { "message": "Passe automatiquement au Short YouTube suivant à la fin de chaque vidéo. Aucune collecte de données, aucun accès réseau." },
   "interrupteur": { "message": "Défilement automatique" },
-  "note": { "message": "Shorts YouTube seulement." }
+  "note": { "message": "Shorts YouTube seulement." },
+  "credit": { "message": "Code créé avec Claude (Anthropic), orchestré par BandDiLondon." }
 }

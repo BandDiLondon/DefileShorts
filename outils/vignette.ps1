@@ -16,7 +16,7 @@ $g.TextRenderingHint = [Drawing.Text.TextRenderingHint]::AntiAliasGridFit
 $g.InterpolationMode = [Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
 
 $fond = [Drawing.Drawing2D.LinearGradientBrush]::new((Pt 0 0), (Pt $W $H),
-    [Drawing.Color]::FromArgb(255, 30, 27, 46), [Drawing.Color]::FromArgb(255, 58, 30, 70))
+    [Drawing.Color]::FromArgb(255, 30, 22, 24), [Drawing.Color]::FromArgb(255, 70, 24, 30))
 $g.FillRectangle($fond, 0, 0, $W, $H)
 
 $logo = [Drawing.Image]::FromFile((Join-Path $racine 'icons\apercu-512.png'))
@@ -24,7 +24,7 @@ $g.DrawImage($logo, 36, 76, 128, 128)
 $logo.Dispose()
 
 $blanc = [Drawing.SolidBrush]::new([Drawing.Color]::White)
-$gris = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 210, 200, 230))
+$gris = [Drawing.SolidBrush]::new([Drawing.Color]::FromArgb(255, 232, 210, 210))
 $titre = [Drawing.Font]::new('Segoe UI Semibold', 26)
 $sous = [Drawing.Font]::new('Segoe UI', 13)
 $g.DrawString('DefileShorts', $titre, $blanc, 182, 92)

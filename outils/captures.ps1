@@ -55,18 +55,18 @@ foreach ($langue in 'fr', 'en') {
     $g.InterpolationMode = [Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
 
     # Fond
-    $fond = [Drawing.Drawing2D.LinearGradientBrush]::new((Pt 0 0), (Pt $W $H), (Couleur 255 26 23 40), (Couleur 255 56 28 68))
+    $fond = [Drawing.Drawing2D.LinearGradientBrush]::new((Pt 0 0), (Pt $W $H), (Couleur 255 28 21 23), (Couleur 255 68 24 30))
     $g.FillRectangle($fond, 0, 0, $W, $H)
 
     # Colonne de gauche : logo, nom, accroche, puces
     $blanc = [Drawing.SolidBrush]::new([Drawing.Color]::White)
-    $doux = [Drawing.SolidBrush]::new((Couleur 255 214 204 236))
+    $doux = [Drawing.SolidBrush]::new((Couleur 255 236 212 212))
     $g.DrawImage($logo, 80, 120, 96, 96)
     $g.DrawString('DefileShorts', [Drawing.Font]::new('Segoe UI Semibold', 30), $blanc, 192, 138)
     $g.DrawString($T.Titre, [Drawing.Font]::new('Segoe UI Semibold', 34), $blanc, [Drawing.RectangleF]::new(80, 270, 580, 140))
     $y = 430
     $policePuce = [Drawing.Font]::new('Segoe UI', 19)
-    $rose = [Drawing.SolidBrush]::new((Couleur 255 236 72 153))
+    $rose = [Drawing.SolidBrush]::new((Couleur 255 240 56 64))
     foreach ($p in $T.Puces) {
         $g.FillEllipse($rose, 84, $y + 11, 12, 12)
         $g.DrawString($p, $policePuce, $doux, 108, $y)
@@ -76,7 +76,7 @@ foreach ($langue in 'fr', 'en') {
     # Short en cours (format 9:16), avec barre de lecture presque au bout
     $cx = 770; $cy = 96; $cw = 300; $ch = 534
     $carte = Arrondi $cx $cy $cw $ch 22
-    $g.FillPath([Drawing.Drawing2D.LinearGradientBrush]::new((Pt $cx $cy), (Pt ($cx + $cw) ($cy + $ch)), (Couleur 255 72 56 140), (Couleur 255 32 120 150)), $carte)
+    $g.FillPath([Drawing.Drawing2D.LinearGradientBrush]::new((Pt $cx $cy), (Pt ($cx + $cw) ($cy + $ch)), (Couleur 255 40 90 150), (Couleur 255 30 140 150)), $carte)
     $g.FillEllipse([Drawing.SolidBrush]::new((Couleur 60 255 255 255)), $cx + 40, $cy + 90, 180, 180)
     $g.FillEllipse([Drawing.SolidBrush]::new((Couleur 40 255 255 255)), $cx + 150, $cy + 260, 120, 120)
     $g.FillRectangle([Drawing.SolidBrush]::new((Couleur 90 255 255 255)), $cx + 24, $cy + $ch - 30, $cw - 48, 5)
@@ -84,12 +84,12 @@ foreach ($langue in 'fr', 'en') {
 
     # Short suivant qui arrive par le bas
     $suivante = Arrondi $cx ($cy + $ch + 26) $cw 300 22
-    $g.FillPath([Drawing.Drawing2D.LinearGradientBrush]::new((Pt $cx 650), (Pt ($cx + $cw) 800), (Couleur 255 150 60 120), (Couleur 255 90 50 160)), $suivante)
+    $g.FillPath([Drawing.Drawing2D.LinearGradientBrush]::new((Pt $cx 650), (Pt ($cx + $cw) 800), (Couleur 255 225 130 60), (Couleur 255 200 80 60)), $suivante)
 
     # Pastille « suivant » entre les deux
     $g.FillEllipse($blanc, $cx + $cw + 30, $cy + $ch - 20, 72, 72)
-    Chevron $g ($cx + $cw + 66) ($cy + $ch + 12) 16 (Couleur 255 124 58 237) 8
-    Chevron $g ($cx + $cw + 66) ($cy + $ch + 30) 16 (Couleur 255 236 72 153) 8
+    Chevron $g ($cx + $cw + 66) ($cy + $ch + 12) 16 (Couleur 255 255 120 120) 8
+    Chevron $g ($cx + $cw + 66) ($cy + $ch + 30) 16 (Couleur 255 210 24 48) 8
 
     # Menu de l'extension (reproduit) en haut à droite
     $mx = 960; $my = 60; $mw = 290; $mh = 96

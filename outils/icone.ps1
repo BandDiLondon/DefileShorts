@@ -23,7 +23,7 @@ function Dessiner-Grand {
     $p.AddArc($m, $m + $w - $r, $r, $r, 90, 90)
     $p.CloseFigure()
     $fond = [Drawing.Drawing2D.LinearGradientBrush]::new((Pt 0 0), (Pt $S $S),
-        [Drawing.Color]::FromArgb(255, 124, 58, 237), [Drawing.Color]::FromArgb(255, 236, 72, 153))
+        [Drawing.Color]::FromArgb(255, 255, 82, 82), [Drawing.Color]::FromArgb(255, 196, 18, 48))
     $g.FillPath($fond, $p)
 
     # Deux chevrons vers le bas : le premier attenue, le second plein

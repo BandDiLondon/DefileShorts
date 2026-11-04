@@ -66,7 +66,7 @@ Console, filtre `DefileShorts`.
 
 ### Développement
 
-- Icônes : `powershell -ExecutionPolicy Bypass -File outils\icone.ps1` (dégradé violet-rose, deux chevrons).
+- Icônes : `powershell -ExecutionPolicy Bypass -File outils\icone.ps1` (dégradé rouge, deux chevrons).
 - Vignette du store : `outils\vignette.ps1` → `store\`.
 - Paquet pour le store : `outils\paquet.ps1` → `dist\DefileShorts-<version>.zip` (chemins avec `/`, exigés par le
   store).

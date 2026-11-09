@@ -42,7 +42,7 @@ même chose utile, sans rien d'autre.
 
 ### Installer
 
-- **Chrome Web Store** : lien à venir (examen en cours).
+- **Chrome Web Store** : [installer DefileShorts](https://chromewebstore.google.com/detail/defileshorts/maodpkbinknmcbfnebhadkggkclcamja)
 - **Release GitHub** : télécharger `DefileShorts-<version>-installation.zip` dans les [releases](https://github.com/BandDiLondon/DefileShorts/releases), l'extraire, puis suivre `INSTALLER.txt`.
 - **Depuis le code** : `chrome://extensions` → activer **Mode développeur** → **Charger l'extension non empaquetée**
   → choisir ce dossier.
@@ -90,7 +90,7 @@ nothing else.
 
 ### Install
 
-- **Chrome Web Store**: link coming soon (review pending).
+- **Chrome Web Store**: [install DefileShorts](https://chromewebstore.google.com/detail/defileshorts/maodpkbinknmcbfnebhadkggkclcamja)
 - **GitHub release**: download `DefileShorts-<version>-installation.zip` from [releases](https://github.com/BandDiLondon/DefileShorts/releases), extract it, then follow `INSTALLER.txt`.
 - **From source**: `chrome://extensions` → enable **Developer mode** → **Load unpacked** → pick this folder.
 
